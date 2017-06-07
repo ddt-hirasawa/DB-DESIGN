@@ -1,0 +1,6 @@
+演習1-1 現在使っている DBMS のバージョンを確認せよ
+
+postgres=# select version();
+                           version
+-------------------------------------------------------------
+ PostgreSQL 9.6.3, compiled by Visual C++ build 1800, 64-bit
