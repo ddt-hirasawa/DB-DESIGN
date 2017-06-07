@@ -1,0 +1,19 @@
+演習2-2 ハードウェアリソースの情報の表示
+
+C:\Users\admin>systeminfo
+
+                        [01]: Intel64 Family 6 Model 58 Stepping 9 GenuineIntel ~2901 Mhz
+BIOS バージョン:        LENOVO G2ET82WW (2.02 ), 2012/09/11
+Windows ディレクトリ:   C:\WINDOWS
+システム ディレクトリ:  C:\WINDOWS\system32
+起動デバイス:           \Device\HarddiskVolume1
+システム ロケール:      ja;日本語
+入力ロケール:           ja;日本語
+タイム ゾーン:          (UTC+09:00) 大阪、札幌、東京
+物理メモリの合計:       7,888 MB
+利用できる物理メモリ:   5,314 MB
+仮想メモリ: 最大サイズ: 9,104 MB
+仮想メモリ: 利用可能:   6,533 MB
+仮想メモリ: 使用中:     2,571 MB
+
+また、タスクマネージャーでパフォーマンスを確認できます
