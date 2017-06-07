@@ -1,0 +1,29 @@
+workbook=# select
+workbook-#
+workbook-# a.商品分類コード,
+workbook-#
+workbook-# b.分類名,
+workbook-#
+workbook-# count(a.商品コード) AS 商品数
+workbook-#
+workbook-# from
+workbook-#
+workbook-# 商品 AS a
+workbook-#
+workbook-# LEFT join
+workbook-#
+workbook-# 商品分類 AS b
+workbook-#
+workbook-# ON
+workbook-#
+workbook-# b.商品分類コード = a.商品分類コード
+workbook-#
+workbook-# group by a.商品分類コード,b.分類名
+workbook-#
+workbook-# order by a.商品分類コード ASC;
+ 商品分類コード |  分類名  | 商品数
+----------------+----------+--------
+ C1             | 水洗用品 |      4
+ C2             | 食器     |      2
+ C3             | 書籍     |      1
+ C4             | 日用雑貨 |      1
