@@ -1,0 +1,64 @@
+演習5-1-2 支社、支店別に取扱商品の一覧を表示せよ
+
+workbook=# select
+workbook-#
+workbook-# a.商品名,
+workbook-# c.支社名,
+workbook-# d.支店名
+workbook-#
+workbook-# from
+workbook-# (
+workbook(#  (
+workbook(# 商品 AS a
+workbook(#
+workbook(# INNER JOIN
+workbook(#
+workbook(# 支店商品 AS b
+workbook(#
+workbook(# ON
+workbook(#
+workbook(# a.商品コード = b.商品コード
+workbook(#  )
+workbook(# INNER JOIN
+workbook(#
+workbook(# 支社 AS c
+workbook(#
+workbook(# ON
+workbook(#
+workbook(# b.支社コード = c.支社コード
+workbook(# )
+workbook-#
+workbook-# INNER JOIN
+workbook-#
+workbook-# 支店 AS d
+workbook-#
+workbook-# ON
+workbook-#
+workbook-# b.支社コード = d.支社コード
+workbook-# ;
+  商品名  | 支社名 | 支店名
+----------+--------+--------
+ 石鹸     | 東京   | 渋谷
+ タオル   | 東京   | 渋谷
+ 歯ブラシ | 東京   | 渋谷
+ タオル   | 東京   | 渋谷
+ 歯ブラシ | 東京   | 渋谷
+ コップ   | 東京   | 渋谷
+ 箸       | 東京   | 渋谷
+ スプーン | 東京   | 渋谷
+ 石鹸     | 東京   | 八重洲
+ タオル   | 東京   | 八重洲
+ 歯ブラシ | 東京   | 八重洲
+ タオル   | 東京   | 八重洲
+ 歯ブラシ | 東京   | 八重洲
+ コップ   | 東京   | 八重洲
+ 箸       | 東京   | 八重洲
+ スプーン | 東京   | 八重洲
+ 石鹸     | 大阪   | 豊中
+ タオル   | 大阪   | 豊中
+ 雑誌     | 大阪   | 豊中
+ 爪切り   | 大阪   | 豊中
+ 石鹸     | 大阪   | 堺
+ タオル   | 大阪   | 堺
+ 雑誌     | 大阪   | 堺
+ 爪切り   | 大阪   | 堺
