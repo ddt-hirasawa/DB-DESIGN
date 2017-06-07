@@ -1,0 +1,53 @@
+演習5-1-3 最も取り扱い商品の多い支店の支店コードと商品数の表示
+
+workbook=# select
+workbook-#
+workbook-# 店.支店コード,
+workbook-# 店.支店名,
+workbook-# count(*) AS 最大商品数
+workbook-#
+workbook-# from
+workbook-#
+workbook-# 支店 AS 店
+workbook-#
+workbook-# INNER JOIN
+workbook-#
+workbook-# 支店商品 AS 商
+workbook-#
+workbook-# ON
+workbook-#
+workbook-# 店.支店コード = 商.支店コード
+workbook-# AND
+workbook-# 店.支社コード = 商.支社コード
+workbook-#
+workbook-# group by 店.支店コード,
+workbook-# 店.支店名,
+workbook-# 商.支店コード
+workbook-#
+workbook-# having count(*) >=
+workbook-# (
+workbook(# select MAX(商品数)
+workbook(#
+workbook(# from
+workbook(# (
+workbook(# select 支店.支社コード,支店.支店コード,count(*) AS 商品数
+workbook(#
+workbook(# from 支店 INNER JOIN 支店商品
+workbook(#
+workbook(# ON
+workbook(#
+workbook(# 支店.支社コード = 支店商品.支社コード
+workbook(#
+workbook(# AND
+workbook(#
+workbook(# 支店.支店コード = 支店商品.支店コード
+workbook(#
+workbook(# group by 支店.支社コード,
+workbook(# 支店.支店コード)
+workbook(#
+workbook(# TMP
+workbook(# )
+workbook-# ;
+ 支店コード | 支店名 | 最大商品数
+------------+--------+------------
+ 02         | 八重洲 |          5
